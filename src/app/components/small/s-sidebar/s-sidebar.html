@@ -3,22 +3,11 @@
 		<!-- <div [@myAnimation]="isOpen" (@myAnimation.done)="animationDone($event)">
 			<small>{{highLights[currentHighlight]}}</small>
 		</div> -->
-		<!-- @if(isOpen) {
-		<small animate.enter="my-animation" animate.leave="my-animation">{{highLights[currentHighlight]}}</small>
-		} -->
-
-		<!-- @if(isOpen){
-		<div @animate.enter="sidebar-enter" @animate.leave="sidebar-leave" (animationend)="animationDone($event)">
-			<small>{{highLights[currentHighlight]}}</small>
-		</div>
-		} -->
-		{{currentHighlight()}}
-		@if(isOpen()){
-		<div class="highlight-box text-white" [class.slide-in]="isOpen()" [class.slide-out]="!isOpen()" (animate.leave)="animationDone()">
+		<div [class.highlight-animation]="isOpen()" (animationend)="animationDone()">
+			@if(isOpen()){
 			<small>{{highLights[currentHighlight()]}}</small>
+			}
 		</div>
-		}
-
 		<button type="button" class="btn btn-light rounded-start-pill shadow-none py-1 pe-2 border-0"
 			data-bs-dismiss="offcanvas" aria-label="Close">
 			<svg width="1.7rem" height="1.7rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -198,7 +187,7 @@
 				<div class="bg-custom-shade p-2" data-bs-dismiss="offcanvas" aria-label="Close"
 					style="border-bottom-right-radius: 1rem;" (click)="toggleFullScreen()">
 					<div class="mt-2">
-						@if(isFullScreen){
+						@if(isFullScreen()){
 						<svg width="1.37rem" height="1.37rem" viewBox="0 0 24 24" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -242,7 +231,7 @@
 						}
 					</div>
 					<div class="my-1">
-						@if(isFullScreen){
+						@if(isFullScreen()){
 						<small>Standard</small>
 						}
 						@else{

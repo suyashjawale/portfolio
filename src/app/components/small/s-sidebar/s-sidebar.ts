@@ -1,4 +1,4 @@
-import { Component,signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,9 +9,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 
 export class SSidebar {
-	isFullScreen: boolean = false;
-	currentHighlight = signal<number>(0);
-	isOpen = signal(true);
+	isFullScreen = signal(false);
+	currentHighlight = signal(0);
+	isOpen = signal(false);
 	highLights: string[] = [
 		"🎉 🥳 Happy Birthday Rushikesh",
 		"🎉 🥳 Happy Birthday Trisha",
@@ -21,7 +21,7 @@ export class SSidebar {
 
 	toggleFullScreen() {
 		const element: any = document.documentElement;
-		if (this.isFullScreen) {
+		if (this.isFullScreen()) {
 			if (document.exitFullscreen) {
 				document.exitFullscreen();
 			} else if ((document as any).mozCancelFullScreen) { // Firefox
@@ -31,9 +31,8 @@ export class SSidebar {
 			} else if ((document as any).msExitFullscreen) { // IE/Edge
 				(document as any).msExitFullscreen();
 			}
-			this.isFullScreen = false;
-		}
-		else {
+			this.isFullScreen.set(false);
+		} else {
 			if (element.requestFullscreen) {
 				element.requestFullscreen();
 			} else if (element.mozRequestFullScreen) { // Firefox
@@ -43,24 +42,21 @@ export class SSidebar {
 			} else if (element.msRequestFullscreen) { // IE/Edge
 				element.msRequestFullscreen();
 			}
-			this.isFullScreen = true;
+			this.isFullScreen.set(true);
 		}
 	}
 
-	animationDone(){
-		this.currentHighlight.update(current => (current+1) % this.highLights.length);
+	animationDone() {
+		// The animation has completed, so we advance to the next highlight
+		this.currentHighlight.update(val => (val + 1) % this.highLights.length);
 		this.isOpen.set(false);
+		// Toggle isOpen to restart the animation for the next highlight
 		setTimeout(() => {
-			this.isOpen.set(true)
-		}, 100);
+			this.isOpen.set(true);
+		}, 0); // Small delay to ensure the class is removed and re-added
 	}
 
-	ngOnInit(){
-		setInterval(() => {
-			this.isOpen.set(false);
-			setTimeout(() => {
-				this.isOpen.set(true)
-			}, 100);
-		}, 8200);
+	ngOnInit() {
+		this.isOpen.set(true);
 	}
 }

@@ -1,0 +1,134 @@
+input[type=range] {
+    height: 2.5px;
+    accent-color: white;
+}
+
+.blur-filter {
+    filter: blur(30px);
+    -webkit-filter: blur(30px);
+    pointer-events: none;
+}
+// ---------------------------------
+
+// @keyframes myAnimation {
+//   0% {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+//   12.5% { // At 1s / 8s = 12.5%
+//     transform: translateX(0%);
+//     opacity: 1;
+//     animation-timing-function: ease-in;
+//   }
+//   87.5% { // At 7s / 8s = 87.5%
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+//   100% { // At 8s / 8s = 100%
+//     transform: translateX(-100%);
+//     opacity: 0;
+//     animation-timing-function: ease-out;
+//   }
+// }
+
+// .my-animation {
+//   animation: myAnimation 8s;
+// }
+
+
+// @keyframes sidebarInOut {
+//   0% {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+//   10% {
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+//   90% {
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+// }
+
+// .sidebar-animate {
+//   animation: sidebarInOut 8s ease-in-out forwards;
+// }
+
+// @keyframes sidebarIn {
+//   from {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes sidebarOut {
+//   from {
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+//   to {
+//     transform: translateX(-100%);
+//     opacity: 0;
+//   }
+// }
+
+// .sidebar-enter {
+//   animation: sidebarIn 1s ease-in forwards, sidebarStay 6s 1s linear forwards;
+// }
+// @keyframes sidebarStay {
+//   from, to {
+//     transform: translateX(0%);
+//     opacity: 1;
+//   }
+// }
+
+// .sidebar-leave {
+//   animation: sidebarOut 1s ease-out forwards;
+// }
+
+// --------------------------------
+
+.highlight-box{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+@keyframes slide-in{
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out{
+  to{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-in{
+  animation: slide-in 3s ease-in forwars, wait 6s 1s forwards;
+}
+
+.slide-out{
+  animation: slide-out 3s ease-out 7s forwards;
+}
+
+@keyframes wait{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 1;
+  }
+}

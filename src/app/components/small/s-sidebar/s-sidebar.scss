@@ -1,37 +1,46 @@
 input[type=range] {
-  height: 2.5px;
-  accent-color: white;
+	height: 2.5px;
+	accent-color: white;
 }
 
 .blur-filter {
-  filter: blur(30px);
-  -webkit-filter: blur(30px);
-  pointer-events: none;
+	filter: blur(30px);
+	-webkit-filter: blur(30px);
+	pointer-events: none;
 }
 
 @keyframes slide-and-fade {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
 
-  12.5% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+	12.5% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
 
-  87.5% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+	87.5% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
 
-  100% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
 }
 
 .highlight-animation {
-  animation: slide-and-fade 8s ease-in-out;
-  animation-fill-mode: forwards;
+	animation: slide-and-fade 8s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.text-clamp-2 {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* Limit to 2 lines */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

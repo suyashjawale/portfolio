@@ -1,0 +1,1 @@
+import{ya as e}from"./chunk-LBFPI75G.js";var o=class s{static \u0275fac=function(t){return new(t||s)};static \u0275cmp=e({type:s,selectors:[["app-s-posts"]],decls:0,vars:0,template:function(t,p){},encapsulation:2})};export{o as SPosts};

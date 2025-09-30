@@ -1,0 +1,1 @@
+import{K as o,ca as n}from"./chunk-N3VCMZTH.js";var a=class e{interaction=n(1);playingSong=n(!1);static \u0275fac=function(t){return new(t||e)};static \u0275prov=o({token:e,factory:e.\u0275fac,providedIn:"root"})};export{a};

@@ -1,0 +1,1 @@
+import{a as s}from"./chunk-YY4JPSZ7.js";import"./chunk-2UZLFXZF.js";import"./chunk-QWFBQ3FV.js";import{Wa as n,ya as t}from"./chunk-EJLA3VPG.js";var a=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-s-blog"]],decls:1,vars:0,template:function(e,l){e&1&&n(0,"app-s-navbar")},dependencies:[s],encapsulation:2})};export{a as SBlog};

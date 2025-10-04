@@ -2,11 +2,9 @@ import { AfterViewInit, Component, effect, ElementRef, inject, signal, ViewChild
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { StateService } from '../../../services/state-service';
 import { DecimalPipe } from '@angular/common';
-
-interface Highlight {
-	hasImage: boolean,
-	content: string
-}
+import { Highlights } from '../../../interfaces/highlight';
+import { Song } from '../../../interfaces/song';
+import { MusicPlayer } from '../../../services/music-player';
 
 @Component({
 	selector: 'app-s-sidebar',
@@ -20,13 +18,14 @@ export class SSidebar {
 	currentHighlight = signal(0);
 	isOpen = signal(false);
 	@ViewChild('audioPlayer') audioPlayerRef!: ElementRef<HTMLAudioElement>;
-	 @ViewChild('progressBar') progressBarRef!: ElementRef<HTMLInputElement>;
-	// audioPlayer!: HTMLAudioElement;
-	currentSongUrl = signal<string>('nadaniya.mp3');
+	@ViewChild('progressBar') progressBarRef!: ElementRef<HTMLInputElement>;
+
 	currentSongTime = signal<number>(0);
+	
 	private progressAnimationFrame: number | null = null;
 	private isUserSeeking = false;
-	highLights: Highlight[] = [
+
+	highLights: Highlights[] = [
 		{
 			hasImage: false,
 			content: "🎉 🥳 Happy Birthday Rushikesh",
@@ -45,7 +44,7 @@ export class SSidebar {
 		}
 	]
 
-	constructor(public RootScope: StateService) {
+	constructor(public playerState: MusicPlayer, public RootScope: StateService) {
 		effect(() => {
 			if (this.RootScope.interaction() != 0) {
 				this.playSong();
@@ -68,13 +67,12 @@ export class SSidebar {
 
 			if (!audio.paused && !audio.ended && !this.isUserSeeking) {
 				const currentTime = audio.currentTime;
-				this.currentSongTime.set(currentTime);   // For display
-				progressBar.value = String(currentTime); // Direct DOM update for smoothness
+				this.currentSongTime.set(currentTime);
+				progressBar.value = String(currentTime);
 			}
 
 			this.progressAnimationFrame = requestAnimationFrame(update);
 		};
-
 		this.progressAnimationFrame = requestAnimationFrame(update);
 	}
 
@@ -91,14 +89,42 @@ export class SSidebar {
 		audio.currentTime = parseFloat(slider.value);
 	}
 
-	// Optional if you want even smoother dragging:
-	onSeekStart() {
-		this.isUserSeeking = true;
+	onSeekStart() { this.isUserSeeking = true; }
+	onSeekEnd() { this.isUserSeeking = false; }
+
+	onAudioEnded() {
+		this.playerState.nextSong();
+		setTimeout(() => this.playSong(), 50);
 	}
 
-	onSeekEnd() {
-		this.isUserSeeking = false;
+	onAudioPaused(){
+		this.playerState.pauseSong();
 	}
+
+	onAudioPlayed(){
+		this.playerState.playSong();
+	}
+
+
+	previousSong() { this.playerState.previousSong(); setTimeout(() => this.playSong(), 50);}
+	nextSong() { this.playerState.nextSong(); setTimeout(() => this.playSong(), 50); }
+
+	pauseSong() {
+		if (this.audioPlayerRef) {
+			this.audioPlayerRef.nativeElement.pause();
+			this.playerState.pauseSong();
+		}
+	}
+
+	playSong() {
+		if (this.audioPlayerRef) {
+			this.audioPlayerRef.nativeElement.play().then(() => {
+				this.RootScope.interaction.set(0);
+				this.playerState.playSong();
+			});
+		}
+	}
+
 
 	toggleFullScreen() {
 		const element: any = document.documentElement;
@@ -141,29 +167,9 @@ export class SSidebar {
 		this.isOpen.set(true);
 	}
 
-	pauseSong() {
-		if (this.audioPlayerRef) {
-			this.audioPlayerRef.nativeElement.pause();
-			this.RootScope.playingSong.set(false);
-		}
+
+	openOfficalVideo(yt_link: string) {
+		window.open(yt_link);
 	}
 
-	playSong() {
-		if (this.audioPlayerRef) {
-			this.audioPlayerRef.nativeElement.play().then(() => {
-				this.RootScope.interaction.set(0);
-				this.RootScope.playingSong.set(true);
-			});
-		}
-	}
-
-	onAudioEnded() {
-		if (this.audioPlayerRef) {
-			this.RootScope.playingSong.set(false);
-		}
-	}
-
-	onTimeUpdate(): void {
-		this.currentSongTime.set(this.audioPlayerRef.nativeElement.currentTime);
-	}
 }

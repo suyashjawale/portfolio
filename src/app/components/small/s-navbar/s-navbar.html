@@ -8,14 +8,14 @@
 				</div>
 				<div class="d-flex align-items-center">
 					<div class="boxContainer d-flex justify-content-between me-2">
-						<div class="box" [ngClass]="{'box1': RootScope.playingSong()}"></div>
-						<div class="box" [ngClass]="{'box2': RootScope.playingSong()}"></div>
-						<div class="box" [ngClass]="{'box3': RootScope.playingSong()}"></div>
-						<div class="box" [ngClass]="{'box4': RootScope.playingSong()}"></div>
-						<div class="box" [ngClass]="{'box5': RootScope.playingSong()}"></div>
+						<div class="box" [ngClass]="{'box1': musicPlayer.currentSong().playingSong}"></div>
+						<div class="box" [ngClass]="{'box2': musicPlayer.currentSong().playingSong}"></div>
+						<div class="box" [ngClass]="{'box3': musicPlayer.currentSong().playingSong}"></div>
+						<div class="box" [ngClass]="{'box4': musicPlayer.currentSong().playingSong}"></div>
+						<div class="box" [ngClass]="{'box5': musicPlayer.currentSong().playingSong}"></div>
 					</div>	
 					<div class="text-small">
-						Naadiniyan
+						{{musicPlayer.currentSong().songName}}
 					</div>
 				</div>
 			</div>

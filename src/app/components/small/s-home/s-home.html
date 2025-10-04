@@ -1,6 +1,10 @@
 <app-s-navbar />
 <div class="top-marginal-height container-fluid">
 
+    <div class="py-2">
+        <app-linear-equilibrium />
+    </div>
+
     <div class="pt-4 d-flex gap-2 align-items-center justify-content-center">
         <div>
             <svg width="1.6rem" height="1.6rem" viewBox="0 0 24.00 24.00" id="Layer_1" data-name="Layer 1"
@@ -29,108 +33,114 @@
                 </g>
             </svg>
         </div>
-        <div class="font-w-500">
+        <div class="fs-5 font-w-500">
             Experience
         </div>
     </div>
     <div style="margin-left: -0.3rem;" class="pt-3">
 
         @for (org of organizations(); let i = $index; track i) {
-        <div class="d-flex">
-            <div class="border-start border-top ps-3 align-self-end"
-                style="margin-left: 0.473rem; margin-bottom: -0.8rem; height: 3.25rem;">
-            </div>
-            <div class="rounded-2 d-flex bg-white align-items-center justify-content-center org-logos mb-3">
-                <img src="tcs_logo.png" class="img-fluid" />
-            </div>
-            <div class="ms-2">
-                <div style="font-weight: 500;">
-                    {{org.org_name}}
-                </div>
-                <div class="text-small">Apr 2023 - Present &nbsp;·&nbsp; 4 yrs 8 mos</div>
-            </div>
-        </div>
+        <div [ngClass]="{'mb-5':i<(organizations().length-1)}">
 
-        @for (role of org.roles; let j = $index; track j) {
-        <div class="d-flex gap-2 align-items-center" [ngStyle]="{'margin-top': j>0 ? '-0.55rem' : '0rem' }">
-            <div>
-                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
-                    data-view-component="true" class="octicon octicon-dot-fill">
-                    <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" fill="#495057"></path>
-                </svg>
-            </div>
-            <div class="font-w-500">{{role.role_name}}</div>
-        </div>
-        <div class="border-start  pb-4" style="margin-top:-0.9rem; margin-left: 0.473rem;">
-            <div class="ms-3 pt-3 text-small">
-                <div>
-                    Apr 2023 &nbsp;-&nbsp; Present &nbsp;•&nbsp; 1 yrs 8 mos
-                </div>
-                @if(role.tag_line.length>0){
-                <div class="mt-2 text-small">
-                    {{role.tag_line}}
-                </div>
-                }
 
-                @for (proj of role.projects; let k = $index; track k) {
-
-                <div class="bg-custom-shade p-3 rounded mb-3 position-relative mt-2">
-                    <div class="font-w-500 mb-2">{{proj.project_name}}</div>
-                    <div>
-                        <div>{{proj.project_content[0]}}</div>
-                        <div class="collapse" id="collapseExample">
-                            @for (content of proj.project_content; let l = $index; track l) {
-                            @if(l>0){
-                            <div class="mt-2">
-                                {{content[l]}}
-                            </div>
-                            }
-                            }
-                        </div>
+            <div class="d-flex">
+                <div class="border-start border-top ps-3 align-self-end"
+                    style="margin-left: 0.473rem; margin-bottom: -0.8rem; height: 3.25rem;">
+                </div>
+                <div class="rounded-2 d-flex bg-white align-items-center justify-content-center org-logos mb-3">
+                    <img [src]="org.logo_name" class="img-fluid p-1" />
+                </div>
+                <div class="ms-2">
+                    <div style="font-weight: 500;">
+                        {{org.org_name}}
                     </div>
-                    <span data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-                        aria-controls="collapseExample" (click)="proj.show=!proj.show"
-                        class="position-absolute top-100 translate-middle" style="left: 93%;">
-                        @if(proj.show){
-                        <svg width="20px" height="20px" viewBox="0 0 24.00 24.00" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                <rect x="0" y="0" width="24.00" height="24.00" rx="12" fill="#00ff6e" strokewidth="0">
-                                </rect>
-                            </g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
-                                    fill="#0F0F0F"></path>
-                            </g>
-                        </svg>
-                        }
-                        @else{
-                        <svg width="20px" height="20px" viewBox="0 0 24.00 24.00" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0">
-                                <rect x="0" y="0" width="24.00" height="24.00" rx="12" fill="#00ff6e" strokewidth="0">
-                                </rect>
-                            </g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
-                                    fill="#0F0F0F"></path>
-                            </g>
-                        </svg>
-                        }
-                    </span>
+                    <div class="text-small" style="white-space: pre;">{{getExperience(org.joined_date,org.end_date)}}
+                    </div>
                 </div>
-                }
-
-
             </div>
 
-        </div>
-        }
+            @for (role of org.roles; let j = $index; track j) {
+            <div class="d-flex gap-2 align-items-center" [ngStyle]="{'margin-top': j>0 ? '-0.55rem' : '0rem' }">
+                <div>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                        data-view-component="true" class="octicon octicon-dot-fill">
+                        <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" fill="#495057"></path>
+                    </svg>
+                </div>
+                <div class="font-w-500">{{role.role_name}}</div>
+            </div>
+            <div class="border-start" [ngClass]="{'pb-4':j<(org.roles.length-1), 'pb-1':j<org.roles.length}"
+                style="margin-top:-0.9rem; margin-left: 0.473rem;">
+                <div class="ms-3 pt-3 text-small">
+                    <div style="white-space: pre;">{{getExperience(role.role_start,role.role_end)}}</div>
+                    @if(role.tag_line.length>0){
+                    <div class="mt-3 pb-2 text-small font-w-500">
+                        {{role.tag_line}}
+                    </div>
+                    }
 
+                    @for (proj of role.projects; let k = $index; track k) {
+
+                    <div class="bg-custom-shade p-3 rounded mb-3 position-relative mt-2">
+                        <div class="font-w-500 mb-2">{{proj.project_name}}</div>
+                        <div>
+                            <div>{{proj.project_content[0]}}</div>
+                            <div class="collapse" [id]="'expProjectContent'+i+j+k">
+                                @for (cont of proj.project_content; let l = $index; track l) {
+                                @if(l>0){
+                                <div class="mt-2">
+                                    {{cont}}
+                                </div>
+                                }
+                                }
+                            </div>
+                        </div>
+                        <span data-bs-toggle="collapse" [attr.data-bs-target]="'#expProjectContent'+i+j+k"
+                            aria-expanded="false" [attr.aria-controls]="'expProjectContent'+i+j+k"
+                            (click)="proj.show=!proj.show" class="position-absolute top-100 translate-middle"
+                            style="left: 93%;">
+                            @if(proj.show){
+                            <svg width="18px" height="18px" viewBox="0 0 24.00 24.00" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="0" y="0" width="24.00" height="24.00" rx="12" fill="#00ff6e"
+                                        strokewidth="0">
+                                    </rect>
+                                </g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                        fill="#0F0F0F"></path>
+                                </g>
+                            </svg>
+                            }
+                            @else{
+                            <svg width="18px" height="18px" viewBox="0 0 24.00 24.00" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="0" y="0" width="24.00" height="24.00" rx="12" fill="#00ff6e"
+                                        strokewidth="0">
+                                    </rect>
+                                </g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                        fill="#0F0F0F"></path>
+                                </g>
+                            </svg>
+                            }
+                        </span>
+                    </div>
+                    }
+
+
+                </div>
+
+            </div>
+            }
+        </div>
         }
 
 
@@ -138,4 +148,155 @@
     </div>
 
 
+    <div class="pt-4 d-flex gap-2 align-items-center justify-content-center">
+        <div>
+            <svg width="1.8rem" height="1.8rem" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M17.673 5.606a3326.02 3326.02 0 0 1-5.671-2.674L.138 8.524l2.03.98L2 9.531V20h1v-9.626l.72-.124.28.135v5.288c0 .914 5.206 3.533 6.249 4.049a3.89 3.89 0 0 0 3.48-.026C20 16.486 20 15.895 20 15.673v-5.288l3.854-1.857s-3.8-1.801-6.181-2.922zM19 15.504a51.526 51.526 0 0 1-5.726 3.302 2.884 2.884 0 0 1-2.582.02A40.184 40.184 0 0 1 5 15.521v-4.655l7 3.373 7-3.373zm-7-2.373L5.416 9.958l6.469-1.115-.17-.987-7.85 1.354-1.403-.676 9.537-4.495c.825.393 8.523 4.014 9.542 4.494z">
+                    </path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="fs-5 font-w-500">
+            Education
+        </div>
+    </div>
+    <div style="margin-left: -0.3rem;" class="pt-3">
+
+        @for (org of college(); let i = $index; track i) {
+        <div [ngClass]="{'mb-5':i<(college().length-1)}">
+
+
+            <div class="d-flex">
+                <div class="border-start border-top ps-3 align-self-end"
+                    style="margin-left: 0.473rem; margin-bottom: -0.8rem; height: 3.25rem;">
+                </div>
+                <div class="rounded-2 d-flex bg-white align-items-center justify-content-center org-logos mb-3">
+                    <img [src]="org.logo_name" class="img-fluid p-1" />
+                </div>
+                <div class="ms-2">
+                    <div style="font-weight: 500;">
+                        {{org.org_name}}
+                    </div>
+                    <div class="text-small" style="white-space: pre;">{{getExperience(org.joined_date,org.end_date)}}
+                    </div>
+                </div>
+            </div>
+
+            @for (role of org.roles; let j = $index; track j) {
+            <div class="d-flex gap-2 align-items-center" [ngStyle]="{'margin-top': j>0 ? '-0.55rem' : '0rem' }">
+                <div>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                        data-view-component="true" class="octicon octicon-dot-fill">
+                        <path d="M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" fill="#495057"></path>
+                    </svg>
+                </div>
+                <div class="font-w-500">{{role.role_name}}</div>
+            </div>
+            <div class="border-start" [ngClass]="{'pb-4':j<(org.roles.length-1), 'pb-1':j<org.roles.length}"
+                style="margin-top:-0.9rem; margin-left: 0.473rem;">
+                <div class="ms-3 pt-3 text-small">
+                    <div style="white-space: pre;">{{getExperience(role.role_start,role.role_end)}}</div>
+                    @if(role.tag_line.length>0){
+                    <div class="mt-3 pb-2 text-small font-w-500">
+                        {{role.tag_line}}
+                    </div>
+                    }
+
+                    @for (proj of role.projects; let k = $index; track k) {
+
+                    <div class="bg-custom-shade p-3 rounded mb-3 position-relative mt-2">
+                        <div class="font-w-500 mb-2">{{proj.project_name}}</div>
+                        <div>
+                            <div>{{proj.project_content[0]}}</div>
+                            <div class="collapse" [id]="'eduProjectContent'+i+j+k">
+                                @for (cont of proj.project_content; let l = $index; track l) {
+                                @if(l>0){
+                                <div class="mt-2">
+                                    {{cont}}
+                                </div>
+                                }
+                                }
+                            </div>
+                        </div>
+                        <span data-bs-toggle="collapse" [attr.data-bs-target]="'#eduProjectContent'+i+j+k"
+                            aria-expanded="false" [attr.aria-controls]="'eduProjectContent'+i+j+k"
+                            (click)="proj.show=!proj.show" class="position-absolute top-100 translate-middle"
+                            style="left: 93%;">
+                            @if(proj.show){
+                            <svg width="18px" height="18px" viewBox="0 0 24.00 24.00" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="0" y="0" width="24.00" height="24.00" rx="12" fill="#00ff6e"
+                                        strokewidth="0">
+                                    </rect>
+                                </g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                        fill="#0F0F0F"></path>
+                                </g>
+                            </svg>
+                            }
+                            @else{
+                            <svg width="18px" height="18px" viewBox="0 0 24.00 24.00" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0">
+                                    <rect x="0" y="0" width="24.00" height="24.00" rx="12" fill="#00ff6e"
+                                        strokewidth="0">
+                                    </rect>
+                                </g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
+                                        fill="#0F0F0F"></path>
+                                </g>
+                            </svg>
+                            }
+                        </span>
+                    </div>
+                    }
+
+
+                </div>
+
+            </div>
+            }
+        </div>
+        }
+
+
+
+    </div>
+
+    <div #ageTab (click)="switchAgeTab.set(!switchAgeTab())">
+        @defer (on viewport(ageTab)) {
+        @if(!switchAgeTab()){
+        <div class="d-flex justify-content-evenly my-5 align-items-center">
+            <div class="meter rounded">
+                <span><span class="rounded progress0"></span></span>
+            </div>
+
+            <div class="meter rounded">
+                <span><span class="rounded progress0 progress1"></span></span>
+            </div>
+
+            <div class="meter rounded">
+                <span [style]="'height:'+(age()[0]%10)*10+'%;'"><span class="rounded progress0 progress2"></span></span>
+            </div>
+        </div>
+        }
+        @else {
+        <div class="d-flex justify-content-center align-items-center ageTab my-5">
+            {{getAge()}}
+        </div>
+        }
+        }
+    </div>
 </div>

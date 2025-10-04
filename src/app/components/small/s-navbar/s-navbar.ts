@@ -1,6 +1,7 @@
 import { NgClass, NgStyle } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { StateService } from '../../../services/state-service';
+import { MusicPlayer } from '../../../services/music-player';
 
 @Component({
 	selector: 'app-s-navbar',
@@ -9,5 +10,5 @@ import { StateService } from '../../../services/state-service';
 	styleUrl: './s-navbar.scss'
 })
 export class SNavbar {
-	RootScope = inject(StateService);
+	musicPlayer = inject(MusicPlayer);
 }

@@ -188,4 +188,8 @@ export class SHome {
 		}
 		return [years, months, days];
 	}
+
+	openLink(link:string){
+		window.open(link);
+	}
 }

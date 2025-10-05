@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SNavbar } from "../s-navbar/s-navbar";
 
 @Component({
   selector: 'app-s-posts',
-  imports: [],
+  imports: [SNavbar],
   templateUrl: './s-posts.html',
   styleUrl: './s-posts.scss'
 })

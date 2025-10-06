@@ -3,6 +3,7 @@ import { SNavbar } from "../s-navbar/s-navbar";
 import { NgClass, NgStyle } from '@angular/common';
 import { organization } from '../../../interfaces/organization';
 import { LinearEquilibrium } from "../../common/linear-equilibrium/linear-equilibrium";
+import { TechStack } from '../../../interfaces/tech-stack';
 
 
 @Component({
@@ -110,6 +111,7 @@ export class SHome {
 		}
 	]);
 
+
 	age = signal<number[]>([0,0,0]);
 	college = signal<organization[]>([
 		{
@@ -152,6 +154,23 @@ export class SHome {
 						},
 					]
 				}
+			]
+		}
+	]);
+
+	tech_stack = signal<TechStack[]>([
+		{
+			stack_name: "Current Stack",
+			tech_name : [
+				"Java 17",
+				"Angular 17 +"
+			]
+		},
+		{
+			stack_name: "Previous Stack",
+			tech_name : [
+				"Python",
+				"Rust"
 			]
 		}
 	]);

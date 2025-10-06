@@ -5,6 +5,7 @@ import { DecimalPipe } from '@angular/common';
 import { Highlights } from '../../../interfaces/highlight';
 import { Song } from '../../../interfaces/song';
 import { MusicPlayer } from '../../../services/music-player';
+import { Updates } from '../../../services/updates';
 
 @Component({
 	selector: 'app-s-sidebar',
@@ -21,35 +22,20 @@ export class SSidebar {
 	@ViewChild('progressBar') progressBarRef!: ElementRef<HTMLInputElement>;
 
 	currentSongTime = signal<number>(0);
-	
+
 	private progressAnimationFrame: number | null = null;
 	private isUserSeeking = false;
 
-	highLights: Highlights[] = [
-		{
-			hasImage: false,
-			content: "🎉 🥳 Happy Birthday Rushikesh",
-		},
-		{
-			hasImage: false,
-			content: "🎉 🥳 Happy Birthday Trisha",
-		},
-		{
-			hasImage: true,
-			content: "🎉 🥳 Happy Birthday Kashish",
-		},
-		{
-			hasImage: true,
-			content: "Mercury rise and set in Pune Fairly close to the Sun. V i s i b l e o n l y b e f o r e s u n r i s e a n d / o r a f t e r sunset.",
-		}
-	]
+	highLights: Highlights[] = [];
 
-	constructor(public playerState: MusicPlayer, public RootScope: StateService) {
+	constructor(public playerState: MusicPlayer, public RootScope: StateService, public updates:Updates) {
 		effect(() => {
 			if (this.RootScope.interaction() != 0) {
 				this.playSong();
 			}
 		});
+
+		this.highLights = updates.todaysBirthdayHighlights();
 	}
 
 	ngAfterViewInit() {
@@ -97,16 +83,16 @@ export class SSidebar {
 		setTimeout(() => this.playSong(), 50);
 	}
 
-	onAudioPaused(){
+	onAudioPaused() {
 		this.playerState.pauseSong();
 	}
 
-	onAudioPlayed(){
+	onAudioPlayed() {
 		this.playerState.playSong();
 	}
 
 
-	previousSong() { this.playerState.previousSong(); setTimeout(() => this.playSong(), 50);}
+	previousSong() { this.playerState.previousSong(); setTimeout(() => this.playSong(), 50); }
 	nextSong() { this.playerState.nextSong(); setTimeout(() => this.playSong(), 50); }
 
 	pauseSong() {

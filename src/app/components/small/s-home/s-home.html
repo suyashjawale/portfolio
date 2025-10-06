@@ -938,50 +938,20 @@
     </div>
 
     <div class="border rounded-2 p-3 mt-3">
-        <div class="font-w-500">
-            Current Stack
-        </div>
-        <div class="text-small mt-2">
-            <div>
-                • &nbsp; Java 17 &nbsp; &nbsp;
-            </div>
-            <div>
-                • &nbsp; Angular 17 +&nbsp; &nbsp;
-            </div>
-            <div>
-                • &nbsp; Bootstrap 5 &nbsp; &nbsp;
-            </div>
-        </div>
 
-        <div class="font-w-500 mt-4">
-            Previous Stack
+        @for (stack of tech_stack(); let i = $index; track i) {
+        <div class="font-w-500" [ngClass]="{'mt-4':i>0}">
+            {{stack.stack_name}}
         </div>
         <div class="text-small mt-2">
+            @for (item of stack.tech_name; track $index) {
             <div>
-                • &nbsp; Java 17 &nbsp; &nbsp;
+                • &nbsp; {{item}} &nbsp; &nbsp;
             </div>
-            <div>
-                • &nbsp; Angular 17 +&nbsp; &nbsp;
-            </div>
-            <div>
-                • &nbsp; Bootstrap 5 &nbsp; &nbsp;
-            </div>
+            }
         </div>
+        }
 
-        <div class="font-w-500 mt-4">
-            Tried Learning
-        </div>
-        <div class="text-small mt-2">
-            <div>
-                • &nbsp; Java 17 &nbsp; &nbsp;
-            </div>
-            <div>
-                • &nbsp; Angular 17 +&nbsp; &nbsp;
-            </div>
-            <div>
-                • &nbsp; Bootstrap 5 &nbsp; &nbsp;
-            </div>
-        </div>
     </div>
 
     <div class="pt-5 d-flex gap-2 align-items-center justify-content-center">

@@ -973,6 +973,13 @@ export class Updates {
 				"name": "Rutuja Pujare",
 				profile: []
 			}],
+		"5-1": [
+			{
+				"message": "Happy Birthday Manish",
+				"name": "Manish Dandekar",
+				profile: []
+			},
+		]
 	})
 
 	private getTodayKey(): string {
@@ -986,7 +993,7 @@ export class Updates {
 		const todaysEvents = allEvents[todayKey] || [];
 
 		return todaysEvents.map((obj) => ({
-			hasImage: obj.name,
+			hasImage: false,
 			content: obj.message
 		} as unknown as Highlights));
 	});

@@ -9,25 +9,25 @@ export class MusicPlayer {
 		{
 			songName: 'Nadaaniyan',
 			artist: 'Akshath Acharya',
-			fileName: 'nadaniya.mp3',
+			fileName: 'song_metadata/nadaaniya/nadaaniya.mp3',
 			playingSong: false,
-			thumbnail: 'nadaaniya.jpg',
+			thumbnail: 'song_metadata/nadaaniya/nadaaniya.jpg',
 			yt_link: ''
 		},
 		{
 			songName: 'Khamoshi',
 			artist: 'Ritviz',
-			fileName: 'Khamoshi.mp3',
+			fileName: 'song_metadata/khamoshi/khamoshi.mp3',
 			playingSong: false,
-			thumbnail: 'khamoshi.jpg',
+			thumbnail: 'song_metadata/khamoshi/khamoshi.jpg',
 			yt_link: ''
 		},
 		{
 			songName: 'Pran',
 			artist: 'Ritviz',
-			fileName: 'pran.mp3',
+			fileName: 'song_metadata/pran/pran.mp3',
 			playingSong: false,
-			thumbnail: 'pran.jpg',
+			thumbnail: 'song_metadata/pran/pran.jpg',
 			yt_link: ''
 		}
 	]);

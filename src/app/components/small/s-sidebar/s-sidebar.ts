@@ -1,9 +1,8 @@
-import { AfterViewInit, Component, effect, ElementRef, inject, signal, ViewChild } from '@angular/core';
+import { Component, effect, ElementRef, signal, ViewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { StateService } from '../../../services/state-service';
 import { DecimalPipe } from '@angular/common';
 import { Highlights } from '../../../interfaces/highlight';
-import { Song } from '../../../interfaces/song';
 import { MusicPlayer } from '../../../services/music-player';
 import { Updates } from '../../../services/updates';
 
@@ -20,7 +19,7 @@ export class SSidebar {
 	isOpen = signal(false);
 	@ViewChild('audioPlayer') audioPlayerRef!: ElementRef<HTMLAudioElement>;
 	@ViewChild('progressBar') progressBarRef!: ElementRef<HTMLInputElement>;
-
+	canPlayAudio = signal<boolean>(false);
 	currentSongTime = signal<number>(0);
 
 	private progressAnimationFrame: number | null = null;

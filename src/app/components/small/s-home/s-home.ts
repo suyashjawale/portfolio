@@ -4,7 +4,7 @@ import { NgClass, NgStyle } from '@angular/common';
 import { organization } from '../../../interfaces/organization';
 import { LinearEquilibrium } from "../../common/linear-equilibrium/linear-equilibrium";
 import { TechStack } from '../../../interfaces/tech-stack';
-
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
 	selector: 'app-s-home',
@@ -19,7 +19,7 @@ export class SHome {
 			org_name: "Tata Consultancy Services",
 			joined_date: new Date("2021-01-21"),
 			end_date: "Present",
-			logo_name: "tcs_logo.png",
+			logo_name: "organization_logo/tcs_logo_4.60kb.svg",
 			roles: [
 				{
 					role_name: "System Engineer",
@@ -112,13 +112,13 @@ export class SHome {
 	]);
 
 
-	age = signal<number[]>([0,0,0]);
+	age = signal<number[]>([0, 0, 0]);
 	college = signal<organization[]>([
 		{
 			org_name: "Savitribai Phule Pune University",
 			joined_date: new Date("2017-06-15"),
 			end_date: new Date("2022-09-10"),
-			logo_name: "sppu_logo.png",
+			logo_name: "organization_logo/sppu_logo15.5kb.webp",
 			roles: [
 				{
 					role_name: "Masters In Computer Science",
@@ -161,25 +161,25 @@ export class SHome {
 	tech_stack = signal<TechStack[]>([
 		{
 			stack_name: "Current Stack",
-			tech_name : [
+			tech_name: [
 				"Java 17",
 				"Angular 17 +"
 			]
 		},
 		{
 			stack_name: "Previous Stack",
-			tech_name : [
+			tech_name: [
 				"Python",
 				"Rust"
 			]
 		}
 	]);
 
-	ngOnInit(){
-		this.age.set(this.calculateDateDifference(new Date("1999-08-03"),new Date()));
+	ngOnInit() {
+		this.age.set(this.calculateDateDifference(new Date("1999-08-03"), new Date()));
 	}
 
-	getAge(){
+	getAge() {
 		return `${this.age()[0]} Years ${this.age()[1]} Months ${this.age()[2]} Days`;
 	}
 
@@ -208,7 +208,7 @@ export class SHome {
 		return [years, months, days];
 	}
 
-	openLink(link:string){
+	openLink(link: string) {
 		window.open(link);
 	}
 }

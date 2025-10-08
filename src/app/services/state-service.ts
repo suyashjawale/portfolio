@@ -7,7 +7,4 @@ import { Song } from '../interfaces/song';
 
 export class StateService {
 	interaction = signal<number>(1);
-	// songs = signal<Song[]>([]);
-	// currentSongIdx = signal<number>(0);
-	// currentSong = computed(() => this.songs()[this.currentSongIdx()]);
 }

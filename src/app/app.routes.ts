@@ -1,44 +1,44 @@
 import { Routes } from '@angular/router';
 
 export function getRoutes(): Routes {
-    // if (window.innerWidth > 768) {
-    //     return [
-    //         {
-    //             path: '',
-    //             loadComponent: () => import('./components/large/large/large.component').then(mod => mod.LargeComponent),
-    //             children:[
-    //                 {
-    //                     path:'',
-    //                     loadComponent: () => import('./components/large/homepage-l/homepage-l.component').then(mod => mod.HomepageLComponent),
-    //                 },
-    //                 {
-    //                     path:'blog',
-    //                     loadComponent: () => import('./components/large/blog-l/blog-l.component').then(mod => mod.BlogLComponent),
-    //                 },
-    //                 {
-    //                     path:'collection',
-    //                     loadComponent: () => import('./components/large/collection-l/collection-l.component').then(mod => mod.CollectionLComponent),
-    //                 },
-    //                 {
-    //                     path:'projects',
-    //                     loadComponent: () => import('./components/large/projects-l/projects-l.component').then(mod => mod.ProjectsLComponent),
-    //                 },
-    //                 {
-    //                     path:'snippets',
-    //                     loadComponent: () => import('./components/large/snippets-l/snippets-l.component').then(mod => mod.SnippetsLComponent),
-    //                 },
-    //                 {
-    //                     path:'posts',
-    //                     loadComponent: () => import('./components/large/posts-l/posts-l.component').then(mod => mod.PostsLComponent),
-    //                 },
-    //                 {
-    //                     path:'playlist',
-    //                     loadComponent: () => import('./components/large/playlist-l/playlist-l.component').then(mod => mod.PlaylistLComponent),
-    //                 },
-    //             ]
-    //         }
-    //     ]
-    // }
+    if (window.innerWidth > 768) {
+        return [
+            {
+                path: '',
+                loadComponent: () => import('./components/large/l-landing/l-landing').then(mod => mod.LLanding),
+                children:[
+                    {
+                        path:'',
+                        loadComponent: () => import('./components/large/l-home/l-home').then(mod => mod.LHome),
+                    },
+                    {
+                        path:'blog',
+                        loadComponent: () => import('./components/large/l-blog/l-blog').then(mod => mod.LBlog),
+                    },
+                    {
+                        path:'collection',
+                        loadComponent: () => import('./components/large/l-collection/l-collection').then(mod => mod.LCollection),
+                    },
+                    {
+                        path:'projects',
+                        loadComponent: () => import('./components/large/l-projects/l-projects').then(mod => mod.LProjects),
+                    },
+                    {
+                        path:'snippets',
+                        loadComponent: () => import('./components/large/l-snippets/l-snippets').then(mod => mod.LSnippets),
+                    },
+                    {
+                        path:'posts',
+                        loadComponent: () => import('./components/large/l-posts/l-posts').then(mod => mod.LPosts),
+                    },
+                    {
+                        path:'playlist',
+                        loadComponent: () => import('./components/large/l-playlist/l-playlist').then(mod => mod.LPlaylist),
+                    },
+                ]
+            }
+        ]
+    }
 
     return [
         {

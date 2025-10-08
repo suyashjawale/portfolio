@@ -1,9 +1,6 @@
 <div class="offcanvas offcanvas-start bg-custom" tabindex="-1" id="menu" aria-labelledby="menuLabel">
 	<div class="d-flex justify-content-between align-items-center ps-3 gap-2 bg-custom-shade rounded-end-5 mt-3 mb-4 me-2"
 		style="height: 4rem; max-height: 4rem;">
-		<!-- <div [@myAnimation]="isOpen" (@myAnimation.done)="animationDone($event)">
-			<small>{{highLights[currentHighlight]}}</small>
-		</div> -->
 		<div [class.highlight-animation]="isOpen()" (animationend)="animationDone()"
 			class="d-flex align-items-center gap-2">
 			@if(isOpen()){
@@ -393,5 +390,6 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 </div>

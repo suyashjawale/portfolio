@@ -11,7 +11,7 @@ export class MusicPlayer {
 			artist: 'Akshath Acharya',
 			fileName: 'song_metadata/nadaaniya/nadaaniya.mp3',
 			playingSong: false,
-			thumbnail: 'song_metadata/nadaaniya/nadaaniya.jpg',
+			thumbnail: 'song_metadata/nadaaniya/nadaaniya.webp',
 			yt_link: ''
 		},
 		{
@@ -19,7 +19,7 @@ export class MusicPlayer {
 			artist: 'Ritviz',
 			fileName: 'song_metadata/khamoshi/khamoshi.mp3',
 			playingSong: false,
-			thumbnail: 'song_metadata/khamoshi/khamoshi.jpg',
+			thumbnail: 'song_metadata/khamoshi/khamoshi.webp',
 			yt_link: ''
 		},
 		{
@@ -27,7 +27,7 @@ export class MusicPlayer {
 			artist: 'Ritviz',
 			fileName: 'song_metadata/pran/pran.mp3',
 			playingSong: false,
-			thumbnail: 'song_metadata/pran/pran.jpg',
+			thumbnail: 'song_metadata/pran/pran.webp',
 			yt_link: ''
 		}
 	]);

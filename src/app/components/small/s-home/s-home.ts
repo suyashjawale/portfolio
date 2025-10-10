@@ -4,7 +4,6 @@ import { NgClass, NgStyle } from '@angular/common';
 import { organization } from '../../../interfaces/organization';
 import { LinearEquilibrium } from "../../common/linear-equilibrium/linear-equilibrium";
 import { TechStack } from '../../../interfaces/tech-stack';
-import { NgOptimizedImage } from '@angular/common'
 
 @Component({
 	selector: 'app-s-home',

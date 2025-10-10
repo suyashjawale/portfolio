@@ -3,10 +3,21 @@
 // 	accent-color: white;
 // }
 
+// .blur-filter {
+// 	filter: blur(30px);
+// 	-webkit-filter: blur(30px);
+// 	pointer-events: none;
+// }
+
 .blur-filter {
 	filter: blur(30px);
 	-webkit-filter: blur(30px);
-	pointer-events: none;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	display: block;
+	border-radius: inherit;
+	overflow: hidden;
+	isolation: isolate;
 }
 
 @keyframes slide-and-fade {

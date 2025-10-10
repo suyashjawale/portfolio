@@ -29,6 +29,22 @@ export class MusicPlayer {
 			playingSong: false,
 			thumbnail: 'song_metadata/pran/pran.webp',
 			yt_link: ''
+		},
+		{
+			songName: 'End of Beginning',
+			artist: 'Djo, Joe Keery',
+			fileName: 'song_metadata/end_of_beginning/end_of_beginning.mp3',
+			playingSong: false,
+			thumbnail: 'song_metadata/end_of_beginning/end_of_beginning.webp',
+			yt_link: ''
+		},
+				{
+			songName: 'Dildaara',
+			artist: 'Shafqat Amanat Ali',
+			fileName: 'song_metadata/dildaara/dildaara.mp3',
+			playingSong: false,
+			thumbnail: 'song_metadata/dildaara/dildaara.webp',
+			yt_link: ''
 		}
 	]);
 

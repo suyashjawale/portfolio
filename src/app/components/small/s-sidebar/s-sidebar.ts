@@ -19,7 +19,7 @@ export class SSidebar {
 	isOpen = signal(false);
 	@ViewChild('audioPlayer') audioPlayerRef!: ElementRef<HTMLAudioElement>;
 	@ViewChild('progressBar') progressBarRef!: ElementRef<HTMLInputElement>;
-	canPlayAudio = signal<boolean>(false);
+
 	currentSongTime = signal<number>(0);
 
 	private progressAnimationFrame: number | null = null;

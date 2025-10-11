@@ -1,52 +1,12 @@
 import { computed, Injectable, signal } from '@angular/core';
 import { Song } from '../interfaces/song';
+import { song_data } from '../data/song_data';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class MusicPlayer {
-	songs = signal<Song[]>([
-		{
-			songName: 'Nadaaniyan',
-			artist: 'Akshath Acharya',
-			fileName: 'song_metadata/nadaaniya/nadaaniya.mp3',
-			playingSong: false,
-			thumbnail: 'song_metadata/nadaaniya/nadaaniya.webp',
-			yt_link: ''
-		},
-		{
-			songName: 'Khamoshi',
-			artist: 'Ritviz',
-			fileName: 'song_metadata/khamoshi/khamoshi.mp3',
-			playingSong: false,
-			thumbnail: 'song_metadata/khamoshi/khamoshi.webp',
-			yt_link: ''
-		},
-		{
-			songName: 'Pran',
-			artist: 'Ritviz',
-			fileName: 'song_metadata/pran/pran.mp3',
-			playingSong: false,
-			thumbnail: 'song_metadata/pran/pran.webp',
-			yt_link: ''
-		},
-		{
-			songName: 'End of Beginning',
-			artist: 'Djo, Joe Keery',
-			fileName: 'song_metadata/end_of_beginning/end_of_beginning.mp3',
-			playingSong: false,
-			thumbnail: 'song_metadata/end_of_beginning/end_of_beginning.webp',
-			yt_link: ''
-		},
-				{
-			songName: 'Dildaara',
-			artist: 'Shafqat Amanat Ali',
-			fileName: 'song_metadata/dildaara/dildaara.mp3',
-			playingSong: false,
-			thumbnail: 'song_metadata/dildaara/dildaara.webp',
-			yt_link: ''
-		}
-	]);
+	songs = signal<Song[]>(song_data);
 
 	// Index of the currently playing song
 	currentSongIdx = signal<number>(0);
@@ -60,6 +20,7 @@ export class MusicPlayer {
 
 	// Reactive playing/paused state
 	isPlaying = signal<boolean>(false);
+	canPlayAudio = signal<boolean>(false);
 
 	/** Play a song by index */
 	playSong(idx?: number) {

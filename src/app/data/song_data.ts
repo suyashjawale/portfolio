@@ -96,5 +96,13 @@ export const song_data: Song[] = [
         playingSong: false,
         thumbnail: 'song_metadata/tum_se_hi/tum_se_hi.webp',
         yt_link: 'https://www.youtube.com/watch?v=Cb6wuzOurPc'
+    },
+            {
+        songName: 'Bombay Dreams',
+        artist: 'KSHMR',
+        fileName: 'song_metadata/bombay_dreams/bombay_dreams.mp3',
+        playingSong: false,
+        thumbnail: 'song_metadata/bombay_dreams/bombay_dreams.webp',
+        yt_link: 'https://www.youtube.com/watch?v=EW4pNzAbVao'
     }
 ];

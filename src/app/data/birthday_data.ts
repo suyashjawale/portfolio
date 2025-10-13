@@ -1,0 +1,691 @@
+import { EventMap } from "../interfaces/event-map";
+
+export const birthday_data: EventMap = {
+    "1-10": [
+        {
+            "message": "Happy Birthday Akshay Bhau",
+            "public_profile": "Akshay Shedage",
+        }
+    ],
+    "1-4": [
+        {
+            "message": "Happy Birthday Pratik Bhau",
+            "public_profile": "https://www.facebook.com/pratik.satpute.5602",
+        }
+    ],
+    "10-12": [
+        {
+            "message": "Happy Birthday",
+            "public_profile": "Priti Bogawat",
+        },
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/pratik.devnal",
+        }
+    ],
+    "10-6": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/kaushik.nayab.3",
+        }
+    ],
+    "11-3": [
+        {
+            "message": "Happy Birthday Yash Bhau",
+            "public_profile": "https://www.facebook.com/yash.wadgaonkar.9",
+        }
+    ],
+    "11-4": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/eshan.kale.9"
+        },
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/ajinkya.khaladkar.5",
+        }
+    ],
+    "11-6": [
+        {
+            "message": "Mummy Daddy Wedding Anniversary",
+            "public_profile": "Mummy Daddy Wedding Anniversary",
+        }
+    ],
+    "11-8": [
+        {
+            "message": "Happy Birthday Rohan Bhau",
+            "public_profile": "Rohan Dhumal Birthday"
+        }
+    ],
+    "12-12": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "https://www.facebook.com/utkarsh.kaklij.1"
+        }
+    ],
+    "12-3": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "Ruturaj Kamble"
+        }
+    ],
+    "12-6": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "https://www.facebook.com/atharva.zagade.50"
+        },
+        {
+            "message": "Happy Birthday Swanand Sheth",
+            "public_profile": "Swanand Shewale"
+        }
+    ],
+    "13-1": [
+        {
+            "message": "Happy Birthday (Chongya 80)",
+            "public_profile": "https://www.facebook.com/suchet.shetty.1"
+        }
+    ],
+    "13-12": [
+        {
+            "message": "Happy Birthday Saket Sheth",
+            "public_profile": "https://www.facebook.com/saket.inamdar"
+        }
+    ],
+    "14-2": [
+        {
+            "message": "Happy Birthday Sonu Tai",
+            "public_profile": "Sudarshani Jadhav Birthday "
+        }
+    ],
+    "14-8": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/ameya.gujar.3"
+        }
+    ],
+    "15-1": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "https://www.facebook.com/linesh.patil.39"
+        }
+    ],
+    "15-10": [
+        {
+            "message": "Happy Birthday Suraj Sheth",
+            "public_profile": "https://www.facebook.com/suraj.kale.5220665"
+        },
+        {
+            "message": "Happy Birthday Ajinath Bhau",
+            "public_profile": "https://www.facebook.com/ajinath.sarade.351"
+        }
+    ],
+    "15-11": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/varadendra.jahagirdar.7"
+        }
+    ],
+    "15-2": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/akash.sawant.31337"
+        }
+    ],
+    "15-5": [
+        {
+            "message": "Happy Birthday Yashya Bhau",
+            "public_profile": "https://www.facebook.com/yash.khade.5205"
+        }
+    ],
+    "15-6": [
+        {
+            "message": "Happy Birthday Aie",
+            "public_profile": "Aie Birthday",
+        }
+    ],
+    "15-8": [
+        {
+            "message": "Happy Birthday Vikrant Sheth",
+            "public_profile": "https://www.facebook.com/vikrant.kurkute.9"
+        }
+    ],
+    "16-4": [
+        {
+            "message": "Happy Birthday Sandesh Bhau. Jai Bhim",
+            "public_profile": "https://www.facebook.com/sandesh.shinde.1069"
+        }
+    ],
+    "16-7": [
+        {
+            "message": "Happy Birthday Navnath Anna (Bhavi Ratan Tata)",
+            "public_profile": "https://www.facebook.com/navnath.raut.102"
+        }
+    ],
+    "16-8": [
+        {
+            "message": "Happy Birthday Venky Sheth",
+            "public_profile": "https://www.facebook.com/venkatesh.shahane"
+        }
+    ],
+    "17-2": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/satyaprakash.yadav.16503"
+        }
+    ],
+    "17-8": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "https://www.facebook.com/chetan.bhosle.71697"
+        }
+    ],
+    "17-9": [
+        {
+            "message": "Happy Birthday Samyak",
+            "public_profile": "Samyak dhammadip jadhav",
+        }
+    ],
+    "18-12": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/snehalkumar.more"
+        }
+    ],
+    "18-6": [
+        {
+            "message": "Today is Mummy Birthday",
+            "public_profile": "Today is Mummy Birthday",
+        },
+        {
+            "message": "Happy Wedding Anniversary Aie-Dada",
+            "public_profile": "Aie-Dada Wedding Anniversary",
+        }
+    ],
+    "19-1": [
+        {
+            "message": "Happy Birthday Bhakti",
+            "public_profile": "https://www.facebook.com/bhakti.khopade.96",
+        }
+    ],
+    "19-3": [
+        {
+            "message": "Happy Birthday Nitesh Bro",
+            "public_profile": "Nitesh Pal"
+        }
+    ],
+    "19-6": [
+        {
+            "message": "Happy Birthday Kunya Sheth",
+            "public_profile": "Kunal Rajput Bday"
+        }
+    ],
+    "19-7": [
+        {
+            "message": "Happy Birthday Bro. ",
+            "public_profile": "Omkar Popale"
+        }
+    ],
+    "2-12": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "Mayur Vijay Sawant"
+        }
+    ],
+    "2-3": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/omkar.thombare.7374"
+        }
+    ],
+    "20-3": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/onkar.satavos.3"
+        }
+    ],
+    "20-8": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/shaunak.ghatpande1",
+        }
+    ],
+    "21-1": [
+        {
+            "message": "Happy Birthday Mama",
+            "public_profile": "https://www.facebook.com/vaibhav.kadale",
+        }
+    ],
+    "21-9": [
+        {
+            "message": "Happy Birthday Kunal Sheth",
+            "public_profile": "https://www.facebook.com/kunal.dhumal.923"
+        }
+    ],
+    "22-4": [
+        {
+            "message": "Happy Birthday Anna",
+            "public_profile": "https://www.facebook.com/arun.poojari.9028"
+        }
+    ],
+    "22-6": [
+        {
+            "message": "Happy Birthday Dolls",
+            "public_profile": "Vaibhav mama Doll's Birthday",
+        }
+    ],
+    "22-9": [
+        {
+            "message": "Happy Bday Demo",
+            "public_profile": "Demo Birthday",
+        },
+        {
+            "message": "Happy Bday Demo",
+            "public_profile": "Demo Birthday"
+        }
+    ],
+    "23-11": [
+        {
+            "message": "Happy Birthday Mam",
+            "public_profile": "https://www.facebook.com/deshmukh.rasika",
+        }
+    ],
+    "23-6": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/faisal.kazi.jr.71"
+        }
+    ],
+    "23-9": [
+        {
+            "message": "Happy Birthday Sheth",
+            "public_profile": "https://www.facebook.com/gaurav.roy.35762"
+        },
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/omkar.pandit.142",
+        },
+        {
+            "message": "Happy Birthday",
+            "public_profile": "Dani Daniels"
+        }
+    ],
+    "24-9": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "Sohel Shaikh Birthday"
+        }
+    ],
+    "25-1": [
+        {
+            "message": "Happy Birthday Sheth",
+            "public_profile": "https://www.facebook.com/ajay.chavan.75436531"
+        }
+    ],
+    "25-12": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/abhijeet.gore.3576"
+        }
+    ],
+    "25-4": [
+        {
+            "message": "Happy Birthday Meghraj",
+            "public_profile": "https://www.facebook.com/meghraj.reddy"
+        }
+    ],
+    "25-5": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "https://www.facebook.com/sanat.khare",
+        }
+    ],
+    "25-7": [
+        {
+            "message": "Happy Birthday Archis Bro",
+            "public_profile": "https://www.facebook.com/archis.deshmukh.3"
+        }
+    ],
+    "25-8": [
+        {
+            "message": "Happy Birthday Abhya",
+            "public_profile": " Abhishek Pawar Bday "
+        }
+    ],
+    "25-9": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/adarsh.prabhu.338"
+        },
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/pranavmahaamuni"
+        },
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/shubham.patel.7739814",
+        }
+    ],
+    "26-1": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/kaustubh.pasalkar",
+        }
+    ],
+    "26-4": [
+        {
+            "message": "Happy Birthday",
+            "public_profile": "https://www.facebook.com/sanjay.jawale.75",
+        }
+    ],
+    "26-6": [
+        {
+            "message": "Happy Birthday kishan",
+            "public_profile": "https://www.facebook.com/kishan.gautam.5"
+        }
+    ],
+    "27-1": [
+        {
+            "message": "Happy Birthday Shaligram",
+            "public_profile": "https://www.facebook.com/shaligram.vishwakarma.7",
+        }
+    ],
+    "27-11": [
+        {
+            "message": "Happy Birthday Adwait Bhau",
+            "public_profile": "https://www.facebook.com/adwait.pade"
+        }
+    ],
+    "27-2": [
+        {
+            "message": "Happy Birthday Dada",
+            "public_profile": "Dada Birthday",
+        }
+    ],
+    "27-6": [
+        {
+            "message": "Happy Birthday Pappu",
+            "public_profile": "https://www.facebook.com/ashish.mhaskar.731"
+        }
+    ],
+    "27-8": [
+        {
+            "message": "Happy Birthday Harshal Bro",
+            "public_profile": "https://www.facebook.com/harshal.pawar.54966",
+        }
+    ],
+    "28-12": [
+        {
+            "message": "Happy Birthday Manjit OP",
+            "public_profile": "https://www.facebook.com/MANJIT.VIP"
+        }
+    ],
+    "28-3": [
+        {
+            "message": "Happy Birthday Nehal Bhau",
+            "public_profile": "https://www.facebook.com/nehal.bhosle.1"
+        }
+    ],
+    "28-4": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "Rahul More Birthday"
+        },
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "Rahul Kadam Birthday"
+        }
+    ],
+    "28-6": [
+        {
+            "message": "Happy Birthday",
+            "public_profile": "radha soman"
+        }
+    ],
+    "28-7": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "Nihar Joshi Birthday"
+        },
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "Shubham Latake Birthday"
+        }
+    ],
+    "28-8": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "sanket Lamkhade"
+        }
+    ],
+    "29-8": [
+        {
+            "message": "Happy Birthday Kini",
+            "public_profile": "https://www.facebook.com/rahul.kini.3745"
+        }
+    ],
+    "29-9": [
+        {
+            "message": "Happy Birthday Yash Bhau",
+            "public_profile": "https://www.facebook.com/yash.pawar.948"
+        }
+    ],
+    "3-11": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/amey.kirad"
+        },
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "Aniket Kakade"
+        }
+    ],
+    "3-12": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "Rohan Jadhav Birthday"
+        }
+    ],
+    "3-6": [
+        {
+            "message": "Happy Birthday",
+            "public_profile": "Prajakta Jahagirdar",
+        },
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/siddhanth.wani"
+        }
+    ],
+    "3-9": [
+        {
+            "message": "Happy Birthday Tambe Bhau",
+            "public_profile": "https://www.facebook.com/krushna.tambe.376"
+        }
+    ],
+    "30-6": [
+        {
+            "message": "Happy Birthday Mama",
+            "public_profile": "https://www.facebook.com/vishal.kadale.75",
+        }
+    ],
+    "30-9": [
+        {
+            "message": "Happy Birthday Manali",
+            "public_profile": "https://www.facebook.com/manali.kulkarni.5836",
+        },
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/praful.bhalerao.169"
+        }
+    ],
+    "31-1": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "https://www.facebook.com/prashant.chaturvedi.50767"
+        }
+    ],
+    "31-12": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "Vishnu Suthar"
+        }
+    ],
+    "31-8": [
+        {
+            "message": "Happy Birthday Lalit Sheth",
+            "public_profile": "https://www.facebook.com/lalit.dangi.3572",
+        }
+    ],
+    "4-2": [
+        {
+            "message": "Happy Birthday Pranav",
+            "public_profile": "https://www.facebook.com/pranav.hinge4"
+        }
+    ],
+    "4-6": [
+        {
+            "message": "Happy Birthday Bhau",
+            "public_profile": "https://www.facebook.com/praful.prajapati.33046"
+        }
+    ],
+    "4-9": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/ashutosh.gorke",
+        }
+    ],
+    "5-12": [
+        {
+            "message": "Happy Birthday Viraj",
+            "public_profile": "Viraj Birthday",
+        },
+        {
+            "message": "Happy Birthday Viraj",
+            "public_profile": "Viraj Birthday",
+        },
+        {
+            "message": "Happy Birthday Viraj",
+            "public_profile": "Viraj Birthday",
+        }
+    ],
+    "5-3": [
+        {
+            "message": "Happy Birthday",
+            "public_profile": "Mayur Kamble",
+        }
+    ],
+    "5-4": [
+        {
+            "message": "Happy Birthday",
+            "public_profile": "Rashmika Bday",
+        }
+    ],
+    "5-9": [
+        {
+            "message": "Happy Birthday Adarsh",
+            "public_profile": "Pillya (Adarsh Navnath Yedage)"
+        },
+        {
+            "message": "Happy Birthday Adarsh",
+            "public_profile": "Pillya (Adarsh Navnath Yedage)",
+        }
+    ],
+    "6-12": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/nikhil.pawankar.99",
+        }
+    ],
+    "6-6": [
+        {
+            "message": "Happy Birthday Sudeep",
+            "public_profile": "https://www.facebook.com/sudeep.wavare",
+        },
+        {
+            "message": "Happy Birthday Sam Bhau",
+            "public_profile": "https://www.facebook.com/sam.bhise.96"
+        }
+    ],
+    "6-7": [
+        {
+            "message": "Happy Birthday Hrushya",
+            "public_profile": "https://www.facebook.com/hrushikesh.yadav.378"
+        }
+    ],
+    "7-3": [
+        {
+            "message": "Happy Birthday Sanchit",
+            "public_profile": "sanchit_khedkar"
+        }
+    ],
+    "7-7": [
+        {
+            "message": "Happy Birthday Rohan Sheth",
+            "public_profile": "https://www.facebook.com/rohan.sardar.37"
+        }
+    ],
+    "8-1": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "Shubham Yadav"
+        }
+    ],
+    "8-11": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/rhishikesh.bhoite.1"
+        }
+    ],
+    "8-3": [
+        {
+            "message": "Happy Birthday Brother",
+            "public_profile": "https://www.facebook.com/sahil.jawalekar.92"
+        }
+    ],
+    "8-6": [
+        {
+            "message": "Happy Birthday Ajay Gole",
+            "public_profile": "https://www.facebook.com/ajay.survase.332"
+        }
+    ],
+    "9-11": [
+        {
+            "message": "Happy Birthday Bhava",
+            "public_profile": "https://www.facebook.com/ramkrishna.karale.1433"
+        }
+    ],
+    "9-2": [
+        {
+            "message": "Happy Birthday Bro",
+            "public_profile": "https://www.facebook.com/nachiket.shende.3",
+        }
+    ],
+    "9-3": [
+        {
+            "message": "Happy Birthday Ajay Preeti Shinde",
+            "public_profile": "Ajay Shinde Birthday"
+        }
+    ],
+    "9-7": [
+        {
+            "message": "Happy Birthday Darshan Bhau",
+            "public_profile": "https://www.facebook.com/darshan.gokule",
+        }
+    ],
+    "9-9": [
+        {
+            "message": "Happy Birthday",
+            "public_profile": "https://www.facebook.com/aarti.bande.52",
+        }
+    ],
+    "11-10": [
+        {
+            "message": "Happy Birthday Rutuja",
+            "public_profile": "Rutuja Pujare",
+        }],
+    "5-1": [
+        {
+            "message": "Happy Birthday Manish",
+            "public_profile": "Manish Dandekar"
+        },
+    ]
+};
